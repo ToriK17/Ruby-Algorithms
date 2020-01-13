@@ -1,7 +1,7 @@
 # The method should accept any number of integers from 0 to 100 as arguments. Each number represents a percentage grade that the student received for a particular test.
 
 
-# The method should return a single letter for that student - "A", "B", "C", "D", or "F". The rubric for the conversion is: A is 90% and up, B is 80% up to 90%, C is 70% up to 80%, D is 60% up to 70%, and F is lower than 60%. For clarification, 79.9999% is still a C grade and 80% is a B grade.
+# The method should return a single letter for that student - "A", "B", "C", "D", or "F". The rubric for the conversion is: A is 90% and up, B is 80% up to 90%, C is 70% up to 80%, D is 60% up to 70%, and F is lower than 60%. For clarification, 79.9999% is still a C grade and 80% is a B grade. Below is an example
 
 # calculate_letter_grade(90, 100, 95) #=> "A"
 
