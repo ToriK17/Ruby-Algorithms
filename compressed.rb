@@ -5,19 +5,28 @@
 # You can assume that the string given will only contain uppercase and lowercase letters (a-z)
 
 def compressed(string)
-  strArray = string.split('').sort()
+  strArray = string.split('')
   compressed = []
   i = 0
+  count = 1
   while i < strArray.length
     if strArray[i] != strArray[(i + 1)]
-      num = strArray.count(strArray[i])
-      compressed << strArray[i] 
-      compressed << num 
+      compressed << strArray[i]
+      compressed << count  
+      count = 1
+    else 
+      count += 1   
     end  
     i += 1 
-  end  
-  p compressed.join()
+  end
+  compressed = compressed.join()  
+  if compressed.length < string.length
+    p compressed
+  else 
+    p string
+  end     
 end
 
 compressed('abcdefggg')
 compressed('abcdefgggaabb')
+compressed('aabcccccaaa')
