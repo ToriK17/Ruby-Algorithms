@@ -16,7 +16,8 @@ def uid_to_proquint(uid)
   proquints = chunks.map { |chunk| map_to_proquint(chunk) }
 
   # Step 4: Combine Proquints with Dash and Remove Trailing Dash
-  proquint_result = proquints.join('-')
+  proquint_result = proquints.join
+  proquint_result = proquint_result.gsub(/(.{3})(?!$)/, '\1-')
 
   # Step 5: Shorten Result
   proquint_result = proquint_result[0, 11].chomp('-')
@@ -66,6 +67,6 @@ def create_proquint_from_scratch(length)
 end
 
 # Example usage
-uid_length = 20
+uid_length = 22
 uid, proquint_result = create_proquint_from_scratch(uid_length)
 puts "Generated UID: #{uid} -> Proquint: #{proquint_result}"
